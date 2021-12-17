@@ -1,0 +1,25 @@
+{
+    "name": "usdtcloud/web3chain",
+    "type": "library",
+    "description": "UsdtCloud web3chain for PHP",
+    "keywords": ["tron", "trx", "chain", "usdtcloud", "block", "web3"],
+    "homepage": "http://developer.usdt.cloud/",
+    "license": "MIT",
+    "require": {
+        "furqansiddiqui/ethereum-php": "0.1.20",
+        "furqansiddiqui/erc20-php": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "usdtcloud",
+            "email": "usdtcloud@gmail.com",
+            "homepage": "https://www.usdt.cloud"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Usdtcloud\\web3chain\\": "src"
+        }
+    },
+    "minimum-stability": "dev"
+}

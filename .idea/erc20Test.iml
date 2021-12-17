@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="Usdtcloud\web3chain\" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/furqansiddiqui/bip32-keypair-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/furqansiddiqui/bip39-mnemonic-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/furqansiddiqui/ecdsa-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/furqansiddiqui/ethereum-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/comely-io/data-types" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/furqansiddiqui/erc20-php" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
