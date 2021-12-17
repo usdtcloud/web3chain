@@ -6,10 +6,32 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit3b668c7c79488e477252f219f99fc481
 {
+    public static $files = array (
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
+        'k' => 
+        array (
+            'kornrunner\\' => 11,
+        ),
+        'W' => 
+        array (
+            'Web3p\\EthereumUtil\\' => 19,
+        ),
         'U' => 
         array (
             'Usdtcloud\\web3chain\\' => 20,
+        ),
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'StephenHill\\Benchmarks\\' => 23,
+            'StephenHill\\' => 12,
+        ),
+        'P' => 
+        array (
+            'PHP\\Math\\BigInteger\\' => 20,
         ),
         'F' => 
         array (
@@ -19,16 +41,49 @@ class ComposerStaticInit3b668c7c79488e477252f219f99fc481
             'FurqanSiddiqui\\BIP39\\' => 21,
             'FurqanSiddiqui\\BIP32\\' => 21,
         ),
+        'E' => 
+        array (
+            'Elliptic\\' => 9,
+        ),
         'C' => 
         array (
             'Comely\\DataTypes\\' => 17,
         ),
+        'B' => 
+        array (
+            'BN\\' => 3,
+            'BI\\' => 3,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'kornrunner\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kornrunner/keccak/src',
+        ),
+        'Web3p\\EthereumUtil\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/web3p/ethereum-util/src',
+        ),
         'Usdtcloud\\web3chain\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'StephenHill\\Benchmarks\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stephenhill/base58/benchmarks',
+        ),
+        'StephenHill\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stephenhill/base58/src',
+        ),
+        'PHP\\Math\\BigInteger\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmath/biginteger/src',
         ),
         'FurqanSiddiqui\\Ethereum\\ERC20\\' => 
         array (
@@ -50,9 +105,21 @@ class ComposerStaticInit3b668c7c79488e477252f219f99fc481
         array (
             0 => __DIR__ . '/..' . '/furqansiddiqui/bip32-keypair-php/src',
         ),
+        'Elliptic\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/simplito/elliptic-php/lib',
+        ),
         'Comely\\DataTypes\\' => 
         array (
             0 => __DIR__ . '/..' . '/comely-io/data-types/src',
+        ),
+        'BN\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/simplito/bn-php/lib',
+        ),
+        'BI\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/simplito/bigint-wrapper-php/lib',
         ),
     );
 

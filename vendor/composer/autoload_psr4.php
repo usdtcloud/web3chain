@@ -6,11 +6,20 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'kornrunner\\' => array($vendorDir . '/kornrunner/keccak/src'),
+    'Web3p\\EthereumUtil\\' => array($vendorDir . '/web3p/ethereum-util/src'),
     'Usdtcloud\\web3chain\\' => array($baseDir . '/src'),
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'StephenHill\\Benchmarks\\' => array($vendorDir . '/stephenhill/base58/benchmarks'),
+    'StephenHill\\' => array($vendorDir . '/stephenhill/base58/src'),
+    'PHP\\Math\\BigInteger\\' => array($vendorDir . '/phpmath/biginteger/src'),
     'FurqanSiddiqui\\Ethereum\\ERC20\\' => array($vendorDir . '/furqansiddiqui/erc20-php/src'),
     'FurqanSiddiqui\\Ethereum\\' => array($vendorDir . '/furqansiddiqui/ethereum-php/src'),
     'FurqanSiddiqui\\ECDSA\\' => array($vendorDir . '/furqansiddiqui/ecdsa-php/src'),
     'FurqanSiddiqui\\BIP39\\' => array($vendorDir . '/furqansiddiqui/bip39-mnemonic-php/src'),
     'FurqanSiddiqui\\BIP32\\' => array($vendorDir . '/furqansiddiqui/bip32-keypair-php/src'),
+    'Elliptic\\' => array($vendorDir . '/simplito/elliptic-php/lib'),
     'Comely\\DataTypes\\' => array($vendorDir . '/comely-io/data-types/src'),
+    'BN\\' => array($vendorDir . '/simplito/bn-php/lib'),
+    'BI\\' => array($vendorDir . '/simplito/bigint-wrapper-php/lib'),
 );

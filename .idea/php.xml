@@ -9,6 +9,14 @@
       <path value="$PROJECT_DIR$/vendor/comely-io/data-types" />
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/furqansiddiqui/erc20-php" />
+      <path value="$PROJECT_DIR$/vendor/web3p/ethereum-util" />
+      <path value="$PROJECT_DIR$/vendor/kornrunner/keccak" />
+      <path value="$PROJECT_DIR$/vendor/simplito/bn-php" />
+      <path value="$PROJECT_DIR$/vendor/simplito/bigint-wrapper-php" />
+      <path value="$PROJECT_DIR$/vendor/simplito/elliptic-php" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/phpmath/biginteger" />
+      <path value="$PROJECT_DIR$/vendor/stephenhill/base58" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration">

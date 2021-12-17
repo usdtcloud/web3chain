@@ -12,6 +12,14 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/comely-io/data-types" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/furqansiddiqui/erc20-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/web3p/ethereum-util" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kornrunner/keccak" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/simplito/bn-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/simplito/bigint-wrapper-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/simplito/elliptic-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmath/biginteger" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/stephenhill/base58" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
