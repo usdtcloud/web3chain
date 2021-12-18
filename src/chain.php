@@ -9,6 +9,7 @@
 namespace Usdtcloud\web3chain;
 
 
+use Exception;
 use PHP\Math\BigInteger\BigInteger;
 use Usdtcloud\web3chain\erc\Erc20php;
 use Usdtcloud\web3chain\erc\Utils;
@@ -19,7 +20,9 @@ class chain extends Erc20php
     private $blockNewNumber = 3;
     private $contractAddress = '';
     public $decimal = 6;
-
+    public $type = [
+        "Transfer" => '0xa9059cbb'//转账
+    ];
     public function __construct(string $host)
     {
         parent::__construct($host);
@@ -32,19 +35,19 @@ class chain extends Erc20php
         if ($this->blockNewNumber - $this->scanNumber <= 2) {
             $this->blockNewNumber = $this->blockNumber();
             if ($this->blockNewNumber - $this->scanNumber <= 2) {
-                throw new \Exception('尚有区块为挂起状态,请稍后再试!');
+                throw new Exception('尚有区块为挂起状态,请稍后再试!');
             }
         }
-        $BlockData    = $this->BlockByNumber($this->scanNumber);
+        $BlockData = $this->BlockByNumber($this->scanNumber);
         $transactions = $BlockData->transactions;
-        $data         = [];
+        $data = [];
         foreach ($transactions as $transaction) {
             $input = $transaction['input'];
-            $row   = [];
+            $row = [];
             if (substr($input, 0, 10) == '0xa9059cbb' && $transaction['to'] === $this->contractAddress) {
-                $row["hash"]   = $transaction['hash'];
-                $row["from"]   = $transaction['from'];
-                $row["to"]     = '0x' . substr($input, 34, 40);
+                $row["hash"] = $transaction['hash'];
+                $row["from"] = $transaction['from'];
+                $row["to"] = '0x' . substr($input, 34, 40);
                 $row["number"] = (float)((new BigInteger('0x' . substr($input, 74, 64)))->toString()) / $this->decimal;
 
                 $info = $this->chain->eth_getTransactionReceipt($transaction['hash']);
@@ -59,27 +62,56 @@ class chain extends Erc20php
         $this->scanNumber++;
         return [
             'block' => $this->scanNumber,
-            'data'  => $data
+            'data' => $data
         ];
 
     }
 
-    public function scanBlockNum(int $num = null,int $scanNumber = null){
+    public function scanBlockNum(int $num = null, int $scanNumber = null)
+    {
         $data = [];
         if (empty($num) || $num > 10) $num = 10;
         $data['data'] = [];
-        for ($i = 0; $i < $num; $i++){
+        for ($i = 0; $i < $num; $i++) {
             $raws = $this->scanBlock($scanNumber);
-            if (count($raws['data']) > 0){
+            if (count($raws['data']) > 0) {
                 foreach ($raws['data'] as $raw) {
-                    array_push($data['data'],$raw);
+                    array_push($data['data'], $raw);
                 }
             }
-            if ($i == $num-1){
+            if ($i == $num - 1) {
                 $data['block'] = $raws['block'];
             }
         }
         return $data;
+    }
+
+    public function transactionHash(string $hash = null)
+    {
+        if (empty($hash)) {
+            throw new Exception('交易hash不能为空!');
+        }
+
+        $data = [];
+
+        $transfer = $this->chain->eth_getTransactionReceipt($hash);
+
+        $data['status'] = $transfer->status == "0x1" ? 1 : 0;
+
+        $Transaction = $this->Transaction($hash);
+
+        $row = [];
+        $row["type"] = substr($Transaction->input, 0, 10);
+        $row["contract"] = $Transaction->to;
+        $row["hash"] = $Transaction->hash;
+        $row["from"] = $Transaction->from;
+        $row["to"] = '0x' . substr($Transaction->input, 34, 40);
+        $row["number"] = (float)((new BigInteger('0x' . substr($Transaction->input, 74, 64)))->toString()) / $this->decimal;
+
+        $data['data'] = $row;
+
+        return $data;
+
     }
 
     /**
@@ -97,7 +129,7 @@ class chain extends Erc20php
     {
         Utils::isAddress($contractAddress);
         $this->contractAddress = $contractAddress;
-        $this->decimal         = pow(10, $this->contract($this->contractAddress)->decimals());
+        $this->decimal = pow(10, $this->contract($this->contractAddress)->decimals());
         return $this;
     }
 
@@ -118,4 +150,6 @@ class chain extends Erc20php
         $this->blockNewNumber = $blockNewNumber;
         return $this;
     }
+
+
 }
