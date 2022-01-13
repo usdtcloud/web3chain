@@ -42,19 +42,23 @@ class chain extends Erc20php
         $transactions = $BlockData->transactions;
         $data = [];
         foreach ($transactions as $transaction) {
+
             $input = $transaction['input'];
             $row = [];
-            if (substr($input, 0, 10) == '0xa9059cbb' && $transaction['to'] === $this->contractAddress) {
+            $row["from"] = $transaction['from'];
+            if (substr($input, 0, 10) == '0xa9059cbb' && $transaction['to'] == $this->contractAddress) {
+//                var_dump($transaction);
                 $row["hash"] = $transaction['hash'];
                 $row["from"] = $transaction['from'];
                 $row["to"] = '0x' . substr($input, 34, 40);
-                $row["number"] = (float)((new BigInteger('0x' . substr($input, 74, 64)))->toString()) / $this->decimal;
-
+                $row["z_number"] = (float)((new BigInteger('0x' . substr($input, 74, 64)))->toString() / $this->decimal);
                 $info = $this->chain->eth_getTransactionReceipt($transaction['hash']);
                 if ($info->status == "0x1") {
+                    $row["number"] = (float)((new BigInteger($info->logs[0]['data']))->toString() / $this->decimal);
                     $row["status"] = 1;
                 } else {
                     $row["status"] = 0;
+                    $row["number"] = 0;
                 }
                 array_push($data, $row);
             }
