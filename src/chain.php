@@ -19,13 +19,15 @@ class chain extends Erc20php
     private $scanNumber = 0;
     private $blockNewNumber = 3;
     private $contractAddress = '';
-    public $decimal = 6;
+    public $decimal = 18;
+    public $address;
+
     public $type = [
         "Transfer" => '0xa9059cbb'//转账
     ];
-    public function __construct(string $host)
+    public function __construct(string $host,$chainId = 1)
     {
-        parent::__construct($host);
+        parent::__construct($host,$chainId);
     }
 
     public function scanBlock(int $scanNumber = null)
@@ -51,10 +53,10 @@ class chain extends Erc20php
                 $row["hash"] = $transaction['hash'];
                 $row["from"] = $transaction['from'];
                 $row["to"] = '0x' . substr($input, 34, 40);
-                $row["z_number"] = (float)((new BigInteger('0x' . substr($input, 74, 64)))->toString() / $this->decimal);
+                $row["z_number"] = (float)((new BigInteger('0x' . substr($input, 74, 64)))->divide($this->decimal)->toString());
                 $info = $this->chain->eth_getTransactionReceipt($transaction['hash']);
                 if ($info->status == "0x1") {
-                    $row["number"] = (float)((new BigInteger($info->logs[0]['data']))->toString() / $this->decimal);
+                    $row["number"] = (float)((new BigInteger($info->logs[0]['data']))->divide($this->decimal)->toString());
                     $row["status"] = 1;
                 } else {
                     $row["status"] = 0;
@@ -154,6 +156,7 @@ class chain extends Erc20php
         $this->blockNewNumber = $blockNewNumber;
         return $this;
     }
+
 
 
 }

@@ -19,7 +19,7 @@ class Erc20php
 {
     public $contract;
     public $chain;
-
+    public $chainId;
     public function __construct(string $host)
     {
         if (empty($host)){
@@ -27,7 +27,7 @@ class Erc20php
         }
 
         $eth = new Ethereum();
-        $GethRPC = new GethRPC($eth, "https://http-mainnet.hecochain.com");
+        $GethRPC = new GethRPC($eth, $host);
         $erc20 = new ERC20($eth);
         $erc20->useRPCClient($GethRPC);
         $this->chain = $GethRPC;
@@ -65,4 +65,7 @@ class Erc20php
             throw new Exception("eth_getBlockByNumber", "Object", gettype($block));
         }
         return new Block($block);}
+
+
+
 }

@@ -8,7 +8,8 @@
     "require": {
         "furqansiddiqui/erc20-php": "dev-master",
         "web3p/ethereum-util": "dev-master",
-        "phpmath/biginteger": "dev-master"
+        "phpmath/biginteger": "dev-master",
+        "kornrunner/ethereum-offline-raw-tx": "dev-master"
     },
     "authors": [
         {
