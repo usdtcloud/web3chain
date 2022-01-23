@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b4e10591dac5f8eb11e0b943ad19385f",
+    "content-hash": "847cd25240314665177f41197e151901",
     "packages": [
         {
             "name": "comely-io/data-types",
@@ -52,114 +52,6 @@
                 "source": "https://github.com/comely-io/data-types/tree/master"
             },
             "time": "2020-06-07T14:02:53+00:00"
-        },
-        {
-            "name": "comely-io/http",
-            "version": "1.0.49",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/comely-io/http.git",
-                "reference": "e214344efea9db724196b1f36421e2ef83f4defa"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/comely-io/http/zipball/e214344efea9db724196b1f36421e2ef83f4defa",
-                "reference": "e214344efea9db724196b1f36421e2ef83f4defa",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "comely-io/data-types": "^1.0.21",
-                "comely-io/utils": "^1.0.10",
-                "ext-curl": "*",
-                "ext-json": "*",
-                "php": "^7.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Comely\\Http\\": [
-                        "src"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Furqan A. Siddiqui",
-                    "email": "hello@furqansiddiqui.com",
-                    "homepage": "https://www.furqansiddiqui.com",
-                    "role": "Author"
-                }
-            ],
-            "description": "HTTP component for Comely Apps",
-            "homepage": "https://github.com/comely-io/http",
-            "support": {
-                "issues": "https://github.com/comely-io/http/issues",
-                "source": "https://github.com/comely-io/http/tree/1.0.49"
-            },
-            "time": "2021-01-02T15:27:55+00:00"
-        },
-        {
-            "name": "comely-io/utils",
-            "version": "1.2.10",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/comely-io/utils.git",
-                "reference": "a831cd812d6b1ab0dcefe4313a1d2d18d8076da8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/comely-io/utils/zipball/a831cd812d6b1ab0dcefe4313a1d2d18d8076da8",
-                "reference": "a831cd812d6b1ab0dcefe4313a1d2d18d8076da8",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "comely-io/data-types": "^1.0.23",
-                "ext-openssl": "*",
-                "php": "^7.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Comely\\Utils\\": [
-                        "src"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Furqan A. Siddiqui",
-                    "email": "hello@furqansiddiqui.com",
-                    "homepage": "https://www.furqansiddiqui.com",
-                    "role": "Author"
-                }
-            ],
-            "description": "Utilities for Comely Apps",
-            "homepage": "https://github.com/comely-io/utils",
-            "support": {
-                "issues": "https://github.com/comely-io/utils/issues",
-                "source": "https://github.com/comely-io/utils/tree/master"
-            },
-            "time": "2019-11-12T05:59:53+00:00"
         },
         {
             "name": "fgrosse/phpasn1",
@@ -241,69 +133,6 @@
                 "source": "https://github.com/fgrosse/PHPASN1/tree/v2.4.0"
             },
             "time": "2021-12-11T12:41:06+00:00"
-        },
-        {
-            "name": "furqansiddiqui/binance-php",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/furqansiddiqui/binance-php.git",
-                "reference": "5c40dabc8bfbcf9ae5348f03e502727be43f5706"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/furqansiddiqui/binance-php/zipball/5c40dabc8bfbcf9ae5348f03e502727be43f5706",
-                "reference": "5c40dabc8bfbcf9ae5348f03e502727be43f5706",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "comely-io/http": "^1.0.48",
-                "ext-bcmath": "*",
-                "ext-curl": "*",
-                "ext-gmp": "*",
-                "ext-json": "*",
-                "ext-openssl": "*",
-                "furqansiddiqui/ecdsa-php": "^0.2.0",
-                "google/protobuf": "^v3.13.0",
-                "php-64bit": "^7.4"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "": [
-                        "proto/generated"
-                    ],
-                    "FurqanSiddiqui\\Binance\\": [
-                        "src"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Furqan A. Siddiqui",
-                    "email": "hello@furqansiddiqui.com",
-                    "homepage": "https://www.furqansiddiqui.com",
-                    "role": "Author"
-                }
-            ],
-            "description": "Binance Integration PHP",
-            "homepage": "https://github.com/furqansiddiqui/binance-php",
-            "support": {
-                "issues": "https://github.com/furqansiddiqui/binance-php/issues",
-                "source": "https://github.com/furqansiddiqui/binance-php/tree/master"
-            },
-            "time": "2021-08-18T13:38:51+00:00"
         },
         {
             "name": "furqansiddiqui/bip32-keypair-php",
@@ -550,55 +379,50 @@
             "time": "2021-01-11T14:05:07+00:00"
         },
         {
-            "name": "google/protobuf",
-            "version": "v3.19.3",
+            "name": "kornrunner/ethereum-address",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "c6d35bfdf41f8cb9dcf71ebc3631f8b9d80aa040"
+                "url": "https://github.com/kornrunner/php-ethereum-address.git",
+                "reference": "aaa5425b9beceb6d271ba2007c4efcaa3f1d8789"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/c6d35bfdf41f8cb9dcf71ebc3631f8b9d80aa040",
-                "reference": "c6d35bfdf41f8cb9dcf71ebc3631f8b9d80aa040",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "url": "https://api.github.com/repos/kornrunner/php-ethereum-address/zipball/aaa5425b9beceb6d271ba2007c4efcaa3f1d8789",
+                "reference": "aaa5425b9beceb6d271ba2007c4efcaa3f1d8789",
+                "shasum": ""
             },
             "require": {
-                "php": ">=5.5.0"
+                "kornrunner/keccak": "^1.0",
+                "mdanter/ecc": "^1",
+                "php": ">=7.3"
             },
             "require-dev": {
-                "phpunit/phpunit": ">=4.8.0"
+                "phpunit/phpunit": "^9"
             },
-            "suggest": {
-                "ext-bcmath": "Need to support JSON deserialization"
-            },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Google\\Protobuf\\": "src/Google/Protobuf",
-                    "GPBMetadata\\Google\\Protobuf\\": "src/GPBMetadata/Google/Protobuf"
+                    "kornrunner\\Ethereum\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "MIT"
             ],
-            "description": "proto library for PHP",
-            "homepage": "https://developers.google.com/protocol-buffers/",
-            "keywords": [
-                "proto"
+            "authors": [
+                {
+                    "name": "Boris Momčilović",
+                    "email": "boris.momcilovic@gmail.com"
+                }
             ],
+            "description": "Pure PHP Ethereum Address Generator / Validator",
             "support": {
-                "issues": "https://github.com/protocolbuffers/protobuf-php/issues",
-                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v3.19.3"
+                "issues": "https://github.com/kornrunner/php-ethereum-address/issues",
+                "source": "https://github.com/kornrunner/php-ethereum-address/tree/master"
             },
-            "time": "2022-01-11T17:40:06+00:00"
+            "time": "2021-08-11T08:35:59+00:00"
         },
         {
             "name": "kornrunner/ethereum-offline-raw-tx",
@@ -659,64 +483,6 @@
                 "source": "https://github.com/kornrunner/php-ethereum-offline-raw-tx/tree/0.4.0"
             },
             "time": "2021-08-17T17:40:16+00:00"
-        },
-        {
-            "name": "kornrunner/ethereum-token",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kornrunner/php-ethereum-token.git",
-                "reference": "32792c6c39f3681a2b308990ce85dca557803bbb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kornrunner/php-ethereum-token/zipball/32792c6c39f3681a2b308990ce85dca557803bbb",
-                "reference": "32792c6c39f3681a2b308990ce85dca557803bbb",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "ext-bcmath": "*",
-                "php": ">=7.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^9"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "kornrunner\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Boris Momcilovic",
-                    "homepage": "https://github.com/kornrunner/php-ethereum-token"
-                }
-            ],
-            "description": "PHP Ethereum Token Utils",
-            "keywords": [
-                "eth",
-                "ethereum",
-                "offline",
-                "transaction",
-                "tx"
-            ],
-            "support": {
-                "issues": "https://github.com/kornrunner/php-ethereum-token/issues",
-                "source": "https://github.com/kornrunner/php-ethereum-token/tree/master"
-            },
-            "time": "2021-08-11T08:24:59+00:00"
         },
         {
             "name": "kornrunner/keccak",
@@ -1337,13 +1103,12 @@
         "furqansiddiqui/erc20-php": 20,
         "web3p/ethereum-util": 20,
         "phpmath/biginteger": 20,
-        "furqansiddiqui/binance-php": 20,
         "kornrunner/ethereum-offline-raw-tx": 20,
-        "kornrunner/ethereum-token": 20
+        "kornrunner/ethereum-address": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.2.0"
 }

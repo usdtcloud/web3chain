@@ -13,6 +13,7 @@ use Exception;
 use kornrunner\Ethereum\Contract;
 use PHP\Math\BigInteger\BigInteger;
 use Web3p\EthereumUtil\Util;
+use kornrunner\Ethereum\Address;
 
 class Utils extends Util
 {
@@ -89,6 +90,15 @@ class Utils extends Util
         }
 
         return $hex;
+    }
+
+    public static function address()
+    {
+        $address = new Address();
+        return [
+            "address" => $address->get(),
+            "privateKey" => $address->getPrivateKey()
+        ];
     }
 
 

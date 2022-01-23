@@ -39,10 +39,8 @@ $to              = "0xff6a5579a9D145646CF5c94FE38a9CA349B1afa2";
 try {
     $TXDATA = $TX->rawTokenSign($to, 2);
     $hash = $TX->GethRPC->eth_sendRawTransaction($TXDATA);
-    var_dump($hash);
 
     $Receipt = $TX->GethRPC->eth_getTransactionReceipt($hash);
-    var_dump($Receipt);
 
 } catch (\Exception $e) {
     var_dump($e->getMessage());
