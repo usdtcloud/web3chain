@@ -102,7 +102,6 @@ class chain extends Erc20php
         $transfer = $this->chain->eth_getTransactionReceipt($hash);
 
         $data['status'] = $transfer->status == "0x1" ? 1 : 0;
-        $row["number"] = (float)((new BigInteger($transfer->logs[0]['data']))->divide($this->decimal)->toString());
         $Transaction = $this->Transaction($hash);
 
         $row = [];
@@ -111,8 +110,8 @@ class chain extends Erc20php
         $row["hash"] = $Transaction->hash;
         $row["from"] = $Transaction->from;
         $row["to"] = '0x' . substr($Transaction->input, 34, 40);
-        $row["z_number"] = (float)((new BigInteger('0x' . substr($Transaction->input, 74, 64)))->toString()) / $this->decimal;
-
+        $row["z_number"] = (float)(new BigInteger('0x' . substr($Transaction->input, 74, 64)))->divide($this->decimal)->toString();
+        $row["number"] = (float)(new BigInteger($transfer->logs[0]['data']))->divide($this->decimal)->toString();
         $data['data'] = $row;
 
         return $data;
