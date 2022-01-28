@@ -39,7 +39,7 @@ class Erc20php
         if (empty($contractAddress)){
             throw new Exception('合约地址不能为空!');
         }
-        $this->contract = $this->contract->token($contractAddress);
+        $this->contract = $this->contract->token(strtolower($contractAddress));
         return $this->contract;
     }
 

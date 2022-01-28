@@ -37,8 +37,8 @@ class Tx
         $erc20->useRPCClient($GethRPC);
         $this->GethRPC    = $GethRPC;
         $this->ERC20 = $erc20;
-        $this->TokenAddress = $contractAddress;
-        $this->Address = $Address;
+        $this->TokenAddress = strtolower($contractAddress);
+        $this->Address = strtolower($Address);
         $this->privateKey = $privateKey;
         $this->ChainId = $ChainId;
         $this->setDecimals();
